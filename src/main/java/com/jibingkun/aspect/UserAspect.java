@@ -16,27 +16,27 @@ import org.springframework.stereotype.Component;
 @Aspect
 public class UserAspect {
 	
-	@Before(value = "execution(public * com.*.service..*.insert*(..))")
+	@Before(value = "execution(public * com.*.aspect..*.insert*(..))")
 	public void beforeSave() {
 		System.out.println("before save.");
 	}
 	
-	@After(value = "execution(public * com.*.service..*.inset*(..))")
+	@After(value = "execution(public * com.*.aspect..*.inset*(..))")
 	public void afterSave() {
 		System.out.println("after save.");
 	}
 	
-	@Before(value = "execution(public * com.*.service..*.get*(..))")
+	@Before(value = "execution(public * com.*.aspect..*.get*(..))")
 	public void beforeQuery() {
 		System.out.println("before query.");
 	}
 	
-	@After(value = "execution(public * com.*.service..*.get*(..))")
+	@After(value = "execution(public * com.*.aspect..*.get*(..))")
 	public void afterQuery() {
 		System.out.println("after query.");
 	}
 	
-	@Around("execution(public * com.*.service..*.update*(..))")
+	@Around("execution(public * com.*.aspect..*.update*(..))")
 	public void aroundQuery(ProceedingJoinPoint pjp) {
 		System.out.println("Around update.  1");
 		try {

@@ -8,10 +8,6 @@
 				http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd"
 	default-autowire="byName">
 
-	<context:annotation-config />  
-	
 	<context:component-scan base-package="com.*" /> 
-
-	<aop:aspectj-autoproxy /> 
 	
 </beans>
